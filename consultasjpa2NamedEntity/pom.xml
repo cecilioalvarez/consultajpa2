@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.arquitecturajava</groupId>
+	<artifactId>consultasjpa</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<build>
+	<plugins>
+	
+	
+	<plugin>
+            <groupId>de.empulse.eclipselink</groupId>
+            <artifactId>staticweave-maven-plugin</artifactId>
+            <version>1.0.0</version>
+            <executions>
+                <execution>
+                    <phase>process</phase>
+                    <goals>
+                        <goal>weave</goal>
+                    </goals>
+                    <configuration>
+                        <persistenceXMLLocation>META-INF/persistence.xml</persistenceXMLLocation>
+                        <logLevel>FINE</logLevel>
+                    </configuration>
+                </execution>
+            </executions>
+            <dependencies>
+                <dependency>
+                    <groupId>org.eclipse.persistence</groupId>
+                    <artifactId>org.eclipse.persistence.jpa</artifactId>
+                    <version>2.7.1</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+	</plugins>
+	</build>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
+		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa -->
+
+		<dependency>
+
+			<groupId>org.eclipse.persistence</groupId>
+
+			<artifactId>org.eclipse.persistence.jpa</artifactId>
+
+			<version>2.7.1</version>
+
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.haulmont.thirdparty/eclipselink -->
+
+
+
+		<!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
+
+		<dependency>
+
+			<groupId>org.eclipse.persistence</groupId>
+
+			<artifactId>eclipselink</artifactId>
+
+			<version>2.7.1</version>
+
+		</dependency>
+
+
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+
+		<dependency>
+
+			<groupId>mysql</groupId>
+
+			<artifactId>mysql-connector-java</artifactId>
+
+			<version>6.0.6</version>
+
+		</dependency>
+
+
+
+	</dependencies>
+</project>
